@@ -122,23 +122,6 @@ const Services = () => {
           ))}
         </div>
 
-        {/* <div className="grid grid-cols-3 gap-8 bg-amber-950">
-          {COMPANIES.map((company, index) => (
-            <div key={index}>
-              <SmallerImageBottomUpReveal
-                delay={index * 0.1}
-                duration={1}
-              >
-                <Image
-                  src={company}
-                  alt="company"
-                  className="object-contain "
-                />
-              </SmallerImageBottomUpReveal>
-            </div>
-          ))}
-        </div> */}
-
         <div>
           <header className="w-[90%] mx-auto py-6 space-y-[6rem]">
             <div className=" flex flex-col items-center">

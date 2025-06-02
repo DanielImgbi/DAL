@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import Button from "../common/button";
 
 export default function ContactSection() {
   return (
@@ -8,12 +9,12 @@ export default function ContactSection() {
       id="contact"
       className="py-20 relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[rgb(72,45,24)] to-[#231f20]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Let&apos;s Create <span className="text-yellow-400">Together</span>
+            Let&apos;s Create <span className="text-[#d3a250]">Together</span>
           </h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Ready to bring your vision to life? Get in touch with us and let&apos;s discuss your
@@ -25,8 +26,8 @@ export default function ContactSection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-slate-900" />
+                <div className="w-12 h-12 bg-[#d3a250] rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Email</h3>
@@ -35,8 +36,8 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-slate-900" />
+                <div className="w-12 h-12 bg-[#d3a250] rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Phone</h3>
@@ -45,8 +46,8 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-slate-900" />
+                <div className="w-12 h-12 bg-[#d3a250] rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Address</h3>
@@ -73,7 +74,7 @@ export default function ContactSection() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#d3a250]"
                   placeholder="Your name"
                 />
               </div>
@@ -89,7 +90,7 @@ export default function ContactSection() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#d3a250]"
                   placeholder="your@email.com"
                 />
               </div>
@@ -106,7 +107,7 @@ export default function ContactSection() {
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#d3a250]"
                 placeholder="Project inquiry"
               />
             </div>
@@ -123,22 +124,18 @@ export default function ContactSection() {
                 name="message"
                 rows={6}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#d3a250] resize-none"
                 placeholder="Tell us about your project..."
               ></textarea>
             </div>
 
-            <button
+            <Button
               type="submit"
-              className="w-full px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center"
-              style={{
-                background: "linear-gradient(45deg, #FFD700, #FFA500)",
-                color: "#231f20",
-              }}
+              className="w-full px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center bg-gradient-to-r from-[#A58E41FF] to-[#d3a250]"
             >
               Send Message
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </Button>
           </form>
         </div>
       </div>

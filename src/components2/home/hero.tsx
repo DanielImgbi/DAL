@@ -1,20 +1,19 @@
-import { Star, ArrowRight } from "lucide-react";
-import Dave from "@/assets/DAL Services.png";
+import { Star, ArrowRight, ChevronDown } from "lucide-react";
+import HERO_IMAGE from "@/assets/DAL Services.png";
 import Header from "../common/nav";
 import Image from "next/image";
+import Button from "../common/button";
+import BackgroundImage from "../common/backgroundImage";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen relative overflow-hidden">
-      <div
-        className="absolute inset-0 gradient_bg"
-        style={{ background: "linear-gradient(135deg, #231f20 0%,#482d18 40%,#5aa090 100%)" }}
-      />
+    <section className="min-h-screen relative overflow-hidden ">
+      <div className="absolute inset-0 gradient_bg" />
       <div className="absolute inset-0 bg-black/10" />
 
       <Header />
 
-      <div className="relative z-10 flex items-center min-h-[calc(100vh-100px)] px-6 lg:px-12">
+      <div className="relative z-10 flex items-center min-h-[calc(100vh-100px)] px-6 lg:px-12 ">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto w-full">
           <div className="space-y-8">
             <div className="space-y-6">
@@ -42,61 +41,74 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center"
-                style={{ background: "linear-gradient(45deg, #FFD700, #FFA500)", color: "#231f20" }}
+              <Button
+                className=" hover:scale-105 hover:shadow-xl flex items-center justify-center bg-gradient-to-r from-[#A58E41FF] to-[#d3a250]"
+                // style={{ background: COLORS.btn, color: COLORS.btnText }}
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
+              </Button>
 
-              <button className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+              <Button className=" border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
                 View Portfolio
-              </button>
+              </Button>
             </div>
 
             <div className="flex items-center space-x-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">200+</div>
-                <div className="text-white/60 text-sm">Projects</div>
-              </div>
-              <div className="text-center">
-                <div
-                  className="text-2xl font-bold"
-                  style={{ color: "#5aa090" }}
-                >
-                  98%
-                </div>
-                <div className="text-white/60 text-sm">Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div
-                  className="text-2xl font-bold"
-                  style={{ color: "#d3a250" }}
-                >
-                  5+
-                </div>
-                <div className="text-white/60 text-sm">Years</div>
-              </div>
+              <TextBox
+                head="200+"
+                body="Projects"
+                className=" text-[#E0A745FF]"
+              />
+              <TextBox
+                head="98%"
+                body="Satisfaction"
+                className=" text-[#5aa090]"
+              />
+              <TextBox
+                head="5+"
+                body="Years"
+                className="text-[#d3a049] "
+              />
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative  h-full">
             <Image
-              src={Dave}
+              src={HERO_IMAGE}
               alt="Digital Design Showcase"
-              className="w-full h-auto rounded-2xl "
+              className="w-full h-full rounded-2xl "
               style={{
                 filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))",
               }}
             />
 
             <div
-              className="absolute -top-4 -right-4 w-24 h-24 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20"
+              className="absolute bottom-0 left-4 w-20 h-20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 lg:w-24 lg:h-24 lg:bottom-6 lg:left-10"
+              style={{ backgroundColor: "rgba(0, 0, 150, 0.021)" }}
+            >
+              <div className="text-center">
+                <div
+                  className="text-lg font-bold "
+                  style={{ color: "#40C6DDFF" }}
+                >
+                  AI
+                </div>
+                <div className="text-white/60 text-xs">Powered</div>
+              </div>
+            </div>
+
+            <div
+              className="absolute top-11 right-1 w-20 h-20  rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 lg:w-24 lg:h-24 lg:right-6"
               style={{ backgroundColor: "rgba(255, 215, 0, 0.1)" }}
             >
               <div className="text-center">
-                <div className="text-lg font-bold text-yellow-400">AI</div>
+                <div
+                  className="text-lg font-bold "
+                  style={{ color: "#d3a250" }}
+                >
+                  AI
+                </div>
                 <div className="text-white/60 text-xs">Enhanced</div>
               </div>
             </div>
@@ -104,12 +116,23 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex flex-col items-center space-y-2 text-white/60">
           <span className="text-sm">Discover More</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </div>
-      </div> */}
+      </div>
+
+      <BackgroundImage />
     </section>
   );
 }
+
+const TextBox = ({ head, body, className }: { head: string; body: string; className?: string }) => {
+  return (
+    <div className="text-center">
+      <div className={`text-2xl font-bold  ${className}`}>{head}</div>
+      <div className="text-white/60 text-sm">{body}</div>
+    </div>
+  );
+};
