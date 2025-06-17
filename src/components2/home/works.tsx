@@ -1,4 +1,4 @@
-import { works } from "@/common/constants/works";
+import { works } from "../../common/constants/works";
 import Image from "next/image";
 import { DiagonalReveal } from "../common/image-reveal";
 

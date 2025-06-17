@@ -1,4 +1,4 @@
-import { services } from "@/common/constants/services";
+import { services } from "../../common/constants/services";
 
 export default function ServicesSection() {
   return (

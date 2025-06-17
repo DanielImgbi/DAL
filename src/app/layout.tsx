@@ -1,7 +1,7 @@
 import { Anton_SC, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Layout from "@/components/layout";
+import Layout from "../components3/layout";
 import { ViewTransitions } from "next-view-transitions";
 
 const anton_sc = Anton_SC({

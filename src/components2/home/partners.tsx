@@ -1,4 +1,4 @@
-import { COMPANIES } from "@/constants/images";
+import { COMPANIES } from "../../constants/images";
 
 import Image from "next/image";
 

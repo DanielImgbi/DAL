@@ -130,7 +130,7 @@ export default function ContactSection() {
             </div>
 
             <Button
-              type="submit"
+              // type="submit"
               className="w-full px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center bg-gradient-to-r from-[#A58E41FF] to-[#d3a250]"
             >
               Send Message

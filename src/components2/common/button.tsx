@@ -1,4 +1,4 @@
-import { COLORS } from "@/common/constants/color";
+import { COLORS } from "../../common/constants/color";
 import { HtmlHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {

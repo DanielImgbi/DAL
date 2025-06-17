@@ -1,4 +1,4 @@
-import { HomeInject } from "@/components";
+import { HomeInject } from "../../components3";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {

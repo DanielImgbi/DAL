@@ -1,4 +1,4 @@
-import LandingPage from "@/components2/home";
+import LandingPage from "../components";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
